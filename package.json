@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "init-project": "npm install && npm-run-all init:*",
-    "init:dirs": "mkdirp sass css vendor images jv",
-    "init:files": "touch README.md index.html sass/style.scss jv/script.jv",
+    "init:dirs": "mkdirp sass css vendor images js",
+    "init:files": "touch README.md index.html sass/style.scss js/script.js",
     "init:gitignore": "curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore -o .gitignore",
     "test": "npm run test:html",
     "test:html": "globstar nu-html-checker *.html",
