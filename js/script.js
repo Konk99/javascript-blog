@@ -80,3 +80,43 @@ function generateTitleLinks() {
 }
 
 generateTitleLinks();    
+
+const optArticleTagsSelector = '.post-tags .list'
+
+function generateTags() {
+  /* find all articles */
+  const articles = document.querrySelectorAll(optArticleTagsSelector);
+
+  /* START LOOP: for every article */
+  for (let article of articles) {
+
+    /* find tags wrapper */
+    const articleWrapper = article.querrySelector(optArticleTagsSelector);
+
+    /* make html variable with empty string */
+    let html = '';
+
+    /* get tags from data-tags attribute */
+    const articleTags = article.getAttribute('data-tags');
+
+    /* split tags into array */
+    const articleTagArray = articleTags.split(' ');
+
+    /* START LOOP: for each tag */
+    for (let tag of articleTagArray) {
+
+      /* generate HTML of the link */
+      const linkHTML = '<li><a href="#tag-' + tag + '"><span>' + tag + '</span></a></li>';
+
+      /* add generated code to html variable */
+      html += linkHTML;
+
+      /* END LOOP: for each tag */
+    }
+
+    /* insert HTML fo the links into the tags wrapper */
+    articleWrapper.innerHTML = html;
+
+    /* END LOOP: for every article */
+  }
+}
