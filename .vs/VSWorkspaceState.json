@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\js",
+    "\\sass"
   ],
-  "SelectedNode": "\\sass",
+  "SelectedNode": "\\js\\script.js",
   "PreviewInSolutionExplorer": false
 }
