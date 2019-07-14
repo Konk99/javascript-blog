@@ -85,7 +85,7 @@ function generateTitleLinks(customSelector = '') {
     const linkHTML = templates.articleLink(linkHTMLData);
 
     /* insert link into titleList */
-    html = html + linkHTML;
+    html += linkHTML;
   }
 
   titleList.innerHTML = html;
